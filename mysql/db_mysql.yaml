@@ -23,6 +23,8 @@ services:
       MYSQL_PASSWORD: mypassword
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/dump.sql
+    ports:
+      - 3306:3306
 
   adminer:
     image: adminer
